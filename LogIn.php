@@ -24,12 +24,8 @@ Session::checkLogin();
 	if (isset($usrLogin)) {
 		echo $usrLogin;
 	}
-
 	?>
-
-
 	<form action="" method="POST">
-	
 		<div class="form-group">
 			<label for="email">User Id/Email Address</label>
 			<input type="text" id="email" name="email" class="form-control"/>

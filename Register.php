@@ -45,7 +45,7 @@ include 'User.php';
 		</div>
 		<div class="form-group">
 			<label for="birth">Date of Birth</label>
-			<input type="text" id="birth" name="birth" class="form-control"/>
+			<input type="date" id="birth" name="birth" class="form-control"/>
 		</div>
 		<button type="image" name="image" class="btn btn-primary">Image</button>
 

@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+- phpMyAdmin XML Dump
+- version 3.5.2
+- http://www.phpmyadmin.net
+-
+- Host: localhost
+- Generation Time: Mar 05, 2019 at 06:34 PM
+- Server version: 5.5.25a
+- PHP Version: 5.4.4
+-->
+
+<pma_xml_export version="1.0" xmlns:pma="http://www.phpmyadmin.net/some_doc_url/">
+    <!--
+    - Structure schemas
+    -->
+    <pma:structure_schemas>
+        <pma:database name="test" collation="latin1_swedish_ci" charset="latin1">
+            <pma:table name="category">
+                CREATE TABLE `category` (
+                  `id` int(10) NOT NULL AUTO_INCREMENT,
+                  `name` varchar(255) NOT NULL,
+                  PRIMARY KEY (`id`)
+                ) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=latin1;
+            </pma:table>
+            <pma:table name="comment">
+                CREATE TABLE `comment` (
+                  `id` int(11) NOT NULL AUTO_INCREMENT,
+                  `parent` int(11) NOT NULL,
+                  `comment` varchar(200) NOT NULL,
+                  `author` varchar(40) NOT NULL,
+                  `date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+                  PRIMARY KEY (`id`)
+                ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+            </pma:table>
+            <pma:table name="info">
+                CREATE TABLE `info` (
+                  `Id` int(20) NOT NULL AUTO_INCREMENT,
+                  `name` varchar(25) NOT NULL,
+                  `ocu` varchar(255) NOT NULL,
+                  `ins` varchar(255) NOT NULL,
+                  `email` varchar(30) NOT NULL,
+                  `birth` date NOT NULL,
+                  `image` geometrycollection NOT NULL,
+                  `password` varchar(100) NOT NULL,
+                  PRIMARY KEY (`Id`)
+                ) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=latin1;
+            </pma:table>
+            <pma:table name="post">
+                CREATE TABLE `post` (
+                  `id` int(100) NOT NULL AUTO_INCREMENT,
+                  `author` varchar(255) NOT NULL,
+                  `category` varchar(255) NOT NULL,
+                  `content` varchar(1000) NOT NULL,
+                  PRIMARY KEY (`id`)
+                ) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
+            </pma:table>
+            <pma:procedure name="test_multi_sets">
+                CREATE DEFINER=`root`@`localhost` PROCEDURE `test_multi_sets`()
+                    DETERMINISTIC
+                begin
+                        select user() as first_col;
+                        select user() as first_col, now() as second_col;
+                        select user() as first_col, now() as second_col, now() as third_col;
+                        end
+            </pma:procedure>
+        </pma:database>
+    </pma:structure_schemas>
+
+    <!--
+    - Database: 'test'
+    -->
+    <database name="test">
+        <!-- Table category -->
+        <table name="category">
+            <column name="id">8</column>
+            <column name="name">c</column>
+        </table>
+        <table name="category">
+            <column name="id">9</column>
+            <column name="name">c#</column>
+        </table>
+        <table name="category">
+            <column name="id">10</column>
+            <column name="name">c++</column>
+        </table>
+        <table name="category">
+            <column name="id">11</column>
+            <column name="name">php</column>
+        </table>
+        <table name="category">
+            <column name="id">12</column>
+            <column name="name">java</column>
+        </table>
+        <!-- Table comment -->
+        <!-- Table info -->
+        <table name="info">
+            <column name="Id">2</column>
+            <column name="name">SHEFALI_BEGUM</column>
+            <column name="ocu">something</column>
+            <column name="ins">something</column>
+            <column name="email">shefalibegum@gmail.com</column>
+            <column name="birth">0000-00-00</column>
+            <column name="image"></column>
+            <column name="password">e3e73b4c32a8526c8f65</column>
+        </table>
+        <table name="info">
+            <column name="Id">3</column>
+            <column name="name">SHEFALI_BEGUM</column>
+            <column name="ocu">something</column>
+            <column name="ins">something</column>
+            <column name="email">shefali@gmail.com</column>
+            <column name="birth">0000-00-00</column>
+            <column name="image"></column>
+            <column name="password">e3e73b4c32a8526c8f65</column>
+        </table>
+        <table name="info">
+            <column name="Id">6</column>
+            <column name="name">SHEFALI_BEGUM</column>
+            <column name="ocu">something</column>
+            <column name="ins">something</column>
+            <column name="email">nasuhaakhter52@gmail.com</column>
+            <column name="birth">0000-00-00</column>
+            <column name="image"></column>
+            <column name="password">827ccb0eea8a706c4c34</column>
+        </table>
+        <table name="info">
+            <column name="Id">7</column>
+            <column name="name">NASUHA_AKHTER</column>
+            <column name="ocu">something</column>
+            <column name="ins">something</column>
+            <column name="email">nasuhaakhter52@gmail.com</column>
+            <column name="birth">0000-00-00</column>
+            <column name="image"></column>
+            <column name="password">827ccb0eea8a706c4c34</column>
+        </table>
+        <table name="info">
+            <column name="Id">8</column>
+            <column name="name">TASMIN_zfdf</column>
+            <column name="ocu">dfd</column>
+            <column name="ins">dgds</column>
+            <column name="email">aa.ra1@gmail.com</column>
+            <column name="birth">0000-00-00</column>
+            <column name="image"></column>
+            <column name="password">aa.ra1@gmail.com</column>
+        </table>
+        <table name="info">
+            <column name="Id">9</column>
+            <column name="name">SHEFALI_BEGUM</column>
+            <column name="ocu">something</column>
+            <column name="ins">something</column>
+            <column name="email">nasuhaakhter52@gmail.com</column>
+            <column name="birth">0000-00-00</column>
+            <column name="image"></column>
+            <column name="password">827ccb0eea8a706c4c34</column>
+        </table>
+        <table name="info">
+            <column name="Id">10</column>
+            <column name="name">NASUHA_AKHTER</column>
+            <column name="ocu">something</column>
+            <column name="ins">something</column>
+            <column name="email">nasuhaakhter52@gmail.com</column>
+            <column name="birth">1996-11-18</column>
+            <column name="image"></column>
+            <column name="password">e10adc3949ba59abbe56e057f20f883e</column>
+        </table>
+        <table name="info">
+            <column name="Id">11</column>
+            <column name="name">Admin</column>
+            <column name="ocu">something</column>
+            <column name="ins">something</column>
+            <column name="email">KhadizaAkter@gmail.com</column>
+            <column name="birth">1996-11-18</column>
+            <column name="image"></column>
+            <column name="password">827ccb0eea8a706c4c34a16891f84e7b</column>
+        </table>
+        <!-- Table post -->
+        <table name="post">
+            <column name="id">1</column>
+            <column name="author"></column>
+            <column name="category">CSS</column>
+            <column name="content">dfhjhdjhhhsjksh</column>
+        </table>
+        <table name="post">
+            <column name="id">2</column>
+            <column name="author"></column>
+            <column name="category">c</column>
+            <column name="content">This is our first code</column>
+        </table>
+        <table name="post">
+            <column name="id">3</column>
+            <column name="author"></column>
+            <column name="category">c#</column>
+            <column name="content"> may be distributed only subject to the terms and conditions set forth in the Creative Commons Attribution 3.0 License or later. A copy of the Creative Commons Attribution 3.0 license is distributed with this manual. The latest version is presently available at ? http://creativecommons.org/licenses/by/3.0/.
+
+If you are interested in redistribution or republishing of this document in whole or in part, either modified or unmodified, and you have questions, please contact the Copyright h</column>
+        </table>
+        <table name="post">
+            <column name="id">4</column>
+            <column name="author"></column>
+            <column name="category">c++</column>
+            <column name="content">The default transaction settings are to be used. This default is determined by the client library, which defines it as IBASE_WRITE|IBASE_CONCURRENCY|IBASE_WAIT in most cases.
+IBASE_READ	Starts a re
+</column>
+        </table>
+        <table name="post">
+            <column name="id">5</column>
+            <column name="author"></column>
+            <column name="category">php</column>
+            <column name="content">Starts a read-write transaction.
+IBASE_CONSISTENCY	Starts a transaction with the isolation level set to 'consistency', which means the transaction cannot read from tables that are being modified by other concurrent transactions.
+IBASE_CONCURRENCY	Starts a transaction with the isolation level set to 'concurrency' (or 'snapshot'), which means the transaction has access to all tables, but cannot see changes that were committed by other transactions after the transaction was started.
+IBASE_COMMITTED	Starts a transaction with the isolation level set to 'read committed'. This flag should be combined with either IBASE_REC_VERSION or IBASE_REC_NO_VERSION. This isolation level allows access to changes that were committed after the transaction was started. If IBASE_REC_NO_VERSION was specified, only the latest version of a row can be read. If IBASE_REC_VERSION was specified, a row can even be read when a modification to it is pending in a concurrent transaction.
+IBASE_WAIT	Indicated that a t</column>
+        </table>
+    </database>
+</pma_xml_export>
